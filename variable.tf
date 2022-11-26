@@ -16,7 +16,7 @@ variable "s3_bucket" {
 
 variable "dynamo_table_name" {
   type    = string
-  default = var.s3_bucket
+  default = "remote-lock-tfstate"
 }
 
 variable "dynamo_read_capacity" {
