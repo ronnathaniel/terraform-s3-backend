@@ -13,10 +13,6 @@ resource "aws_dynamodb_table" "state_lock" {
   stream_enabled   = false
   stream_view_type = ""
 
-  lifecycle {
-    prevent_destroy = true
-  }
-
   attribute {
     name = var.dynamo_hash_key
     type = "S"

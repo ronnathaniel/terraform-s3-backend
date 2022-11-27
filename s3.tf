@@ -12,9 +12,6 @@ resource "aws_s3_bucket" "state" {
     TerraformModule    = "terraform-s3-backend"
     Description        = var.s3_state_bucket_description
   }
-  lifecycle {
-    prevent_destroy = true
-  }
 }
 
 resource "aws_s3_bucket" "logs" {
